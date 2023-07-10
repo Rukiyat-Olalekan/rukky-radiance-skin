@@ -2,6 +2,14 @@
     margin: 2rem;
     padding: 1rem;
 }
+div .image {
+    width: 120px;
+    height: 100px;
+    margin-bottom: 5rem;
+}
+img {
+    max-width: 100%;
+}
 .product:hover {
     transition-property: box-shadow, transform;
     transition-duration: 350ms;
