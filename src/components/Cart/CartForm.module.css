@@ -1,0 +1,45 @@
+form {
+margin: 1rem;
+height: 19rem;
+overflow: auto;
+}
+.cart-form__control label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.cart-form__control input {
+    display: block;
+    outline: 1px solid black;
+    font-size: 1rem;
+}
+
+ .invalid label{
+    color: red;
+}
+
+.invalid input{
+    background-color: #ffa9ae;
+    border-color: red;
+}
+
+
+.cart-form__actions {
+    text-align: right;
+}
+.cart-form__actions button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-color: black;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    height: 3rem;
+}
+.cart-form__actions button:hover, .cart-form__actions button:focus {
+    background-color: #ffa9ae;
+    border-color: #ffa9ae;
+}
+

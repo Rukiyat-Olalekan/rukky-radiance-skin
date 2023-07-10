@@ -1,0 +1,13 @@
+/* .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.input input {
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    padding-left: 0.5rem;
+}

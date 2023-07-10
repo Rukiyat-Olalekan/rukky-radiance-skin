@@ -1,0 +1,17 @@
+.available {
+    background-color: #ffa9ae;
+    width: 100vw;
+    height: 20rem;
+    display: flex;
+}
+.sales {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.sales button {
+    width: 10rem;
+}
+.sales button:hover {
+background-color: black;
+}

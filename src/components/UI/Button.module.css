@@ -1,0 +1,14 @@
+.button {
+background: #d18e8d;
+border: none;
+color: white;
+cursor: pointer;
+font: inherit;
+padding: 0.75rem, 3rem;
+font-weight: bold;
+min-height: 3rem;
+}
+
+.button:hover, .button:focus {
+    background-color:  black;
+}
