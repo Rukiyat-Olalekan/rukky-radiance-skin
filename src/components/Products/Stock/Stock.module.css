@@ -1,4 +1,4 @@
-.product {
+.stock {
     margin: 2rem auto;
     padding: 1rem;
     max-width: 90%;
@@ -6,7 +6,7 @@
 div .image {
     width: 150px;
     height: 130px;
-    margin: 0 auto;
+    margin: auto;
 }
 div .detail {
     margin-top: 3.8rem;
@@ -15,10 +15,14 @@ div .detail {
     
 img {
     max-width: 100%;
-    margin: 0;
 }
-
-.product:hover {
+.stock-properties {
+    margin-bottom: 0;
+}
+.stock-form {
+    margin-top: 0;
+}
+.stock:hover {
     transition-property: box-shadow, transform;
     transition-duration: 350ms;
     transition-timing-function: ease-out;
@@ -26,7 +30,7 @@ img {
     transform: translateY(-6px);
     cursor: pointer;
 }
-.product-decription {
+.stock-decription {
     font-size: small;
     font-family: 'Courier New', Courier, monospace;
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import classes from "./AvailableProducts.module.css";
 import AvailableNow from "./AvailableNow";
 import ProductLists from "./Product/ProductLists";
+import Featured from "./Featured";
+import StockLists from "./Stock/StockLists";
 
 const AvailableProducts = () => {
   const [fetchedData, setFetchedData] = useState([]);
@@ -11,7 +13,7 @@ const AvailableProducts = () => {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          "https://rukky-radiance-default-rtdb.firebaseio.com/products.json"
+          "https://rukky-radiance-skin-default-rtdb.firebaseio.com/products.json"
         );
         if (response.ok === false) {
           throw new Error("Something went wrong");
@@ -26,7 +28,7 @@ const AvailableProducts = () => {
             name: data[key].name,
             price: data[key].price,
             description: data[key].description,
-            productImageUrl: data[key].productImageUrl
+            productImageUrl: data[key].productImageUrl,
           });
         }
         setFetchedData(dataArray);
@@ -45,6 +47,8 @@ const AvailableProducts = () => {
       ) : (
         <ProductLists items={fetchedData} />
       )}
+      <Featured />
+      <StockLists items={fetchedData} />
     </main>
   );
 };

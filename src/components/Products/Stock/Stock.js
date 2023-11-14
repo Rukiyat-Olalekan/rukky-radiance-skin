@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import classes from "./Product.module.css";
-import ProductForm from "./ProductForm";
+import classes from "./Stock.module.css";
+import StockForm from "./StockForm";
 import CartContext from "../../../store/cart-context";
 
-const Product = (props) => {
+const Stock = (props) => {
   const cartCtx = useContext(CartContext);
 
   const addToCartHandler = (amount) => {
@@ -22,22 +22,22 @@ const Product = (props) => {
   }).format(props.price);
 
   return (
-    <li className={classes.product}>
+    <li className={classes.stock}>
       <div className={classes.image}>
-        <img src={props.productImage} alt="a product" />
+        <img src={props.productImage} alt="a Stock" />
       </div>
       <div className={classes.detail}>
-        <div className={classes["product-properties"]}>
+        <div className={classes["stock-properties"]}>
           <p>{props.name}</p>
-          <p className={classes["product-description"]}>{props.description}</p>
+          <p className={classes["stock-description"]}>{props.description}</p>
           <p>{formattedPrice}</p>
         </div>
-        <div className={classes["product-form"]}>
-          <ProductForm id={props.id} onAddToCart={addToCartHandler} />
+        <div className={classes["stock-form"]}>
+          <StockForm id={props.id} onAddToCart={addToCartHandler} />
         </div>
       </div>
     </li>
   );
 };
 
-export default Product;
+export default Stock;

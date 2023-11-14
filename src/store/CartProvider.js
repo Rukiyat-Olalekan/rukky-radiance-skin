@@ -21,7 +21,7 @@ const productReducer = (state, action) => {
       // });
       let updatedItem = {
         ...existingItem,
-        amount: existingItem.amount + action.item.amount,
+        amount: existingItem.amount + 1,
       };
       updatedItems = [...state.items];
       updatedItems[existingItemIndex] = updatedItem;

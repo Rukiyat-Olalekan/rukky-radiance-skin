@@ -7,10 +7,9 @@ const AvailableNow = () => {
     <div className={classes.available}>
       <div className={classes.sales}>
         <h1>Beauty sale!!!</h1>
-        <h2>GET UP TO 10% DISCOUNT ON ALL PRODUCTS</h2>
+        <h1>GET UP TO 10% DISCOUNT ON ALL PRODUCTS</h1>
         <Button type="submit">SHOP NOW</Button>
       </div>
-      <div></div>
     </div>
   );
 };

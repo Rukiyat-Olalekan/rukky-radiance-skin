@@ -1,0 +1,30 @@
+.stock-list h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.stock-lists {
+    display: flex;
+    list-style: none;
+    margin: 0.5rem;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.button button {
+    width: 10rem;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #d18e8d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button button:hover, .button button:focus {
+    background-color:  black;
+}

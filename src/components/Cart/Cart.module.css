@@ -14,12 +14,6 @@
     height: 3rem;
     padding: 0.5rem 0;
 }
-/* .cart-total {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
-
 .cart-total__subtotal {
     display: flex;
     justify-content: space-between;
@@ -42,4 +36,3 @@
 .cart-total__actions button:hover, .cart-total__actions button:focus {
     background: black;
 }
-

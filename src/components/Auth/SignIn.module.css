@@ -1,0 +1,50 @@
+.form {
+    width: 40rem;
+    margin: 5rem auto;
+  }
+  .form h2,
+  .form h3 {
+    margin: 1rem 0;
+    color: purple;
+    line-height: 2;
+  }
+  .form .input {
+    margin: 1rem 0;
+  }
+  .form label {
+    width: 100%;
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .form input {
+    width: 100%;
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+  .form .form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+  .action {
+    width: 20%;
+    margin: 3rem auto;
+  }
+  .action button {
+    display: inline;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 1rem 0.8rem;
+    border: none;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .action button:hover {
+    background-color: black;
+    color: white;
+  }

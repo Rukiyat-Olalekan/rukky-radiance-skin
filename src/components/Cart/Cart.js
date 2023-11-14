@@ -8,7 +8,6 @@ import CartForm from "./CartForm";
 const CartLists = () => {
   const cartCtx = useContext(CartContext);
 
-
   const removeCartHandler = (id) => {
     cartCtx.removeItem(id);
   };
@@ -43,29 +42,36 @@ const Cart = (props) => {
     setShowCartForm(true);
   };
   const cartCtx = useContext(CartContext);
+  const totalAmount = cartCtx.totalAmount;
+  const formattedTotalAmount = new Intl.NumberFormat("en-NG", {
+    style: "currency",
+    currency: "NGN",
+  }).format(totalAmount);
+
+  //Make sure this posts the order to backend
 
   const CartFormCheckoutHandler = async (value) => {
     setIsSubmitting(true);
     try {
-    const response = await fetch(
-      "https://task-http-8acea-default-rtdb.firebaseio.com/order.json",
-      {
-        method: "POST",
-        body: JSON.stringify({ user: value, orderedItems: cartCtx.items }),
+      const response = await fetch(
+        "https://task-http-8acea-default-rtdb.firebaseio.com/order.json",
+        {
+          method: "POST",
+          body: JSON.stringify({ user: value, orderedItems: cartCtx.items }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Order was not sent!");
       }
-    );
-    if (!response.ok) {
-      throw new Error("Order was not sent!");
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      setError(error.message);
     }
-    const data = await response.json();
-    console.log(data)} catch (error) {
-        setError(error.message);
-    };
     setIsSubmitting(false);
     setDidSubmit(true);
     cartCtx.clearItem();
   };
-
 
   const cartModalContent = (
     <React.Fragment>
@@ -73,7 +79,7 @@ const Cart = (props) => {
       <CartLists />
       <div className={classes["cart-total__subtotal"]}>
         <h3>SUBTOTAL:</h3>
-        <span>{cartCtx.totalAmount}</span>
+        <span>{formattedTotalAmount}</span>
       </div>
     </React.Fragment>
   );

@@ -28,7 +28,7 @@ const CartForm = (props) => {
     const stateIsValid = enteredStateInput.trim() !== "";
 
     setFormInputsValidity({
-      name: nameIsValid, //read/practise this logic
+      name: nameIsValid, 
       street: streetIsValid,
       postalCode: postalCodeIsValid,
       state: stateIsValid,
