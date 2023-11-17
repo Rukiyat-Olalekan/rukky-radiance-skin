@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+
+import { app } from "../../firebaseConfig";
+
 import classes from "./AvailableProducts.module.css";
-import AvailableNow from "./AvailableNow";
 import ProductLists from "./Product/ProductLists";
-import Featured from "./Featured";
 import StockLists from "./Stock/StockLists";
 
 const AvailableProducts = () => {
@@ -13,7 +14,7 @@ const AvailableProducts = () => {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          "https://rukky-radiance-skin-default-rtdb.firebaseio.com/products.json"
+          "https://rukky-radiance-default-rtdb.firebaseio.com/products.json"
         );
         if (response.ok === false) {
           throw new Error("Something went wrong");
@@ -40,16 +41,14 @@ const AvailableProducts = () => {
   }, []);
 
   return (
-    <main className={classes["available-products"]}>
-      <AvailableNow />
+    <section className={classes["available-products"]}>
       {error ? (
         <p className={classes.error}>{error}</p>
       ) : (
         <ProductLists items={fetchedData} />
       )}
-      <Featured />
       <StockLists items={fetchedData} />
-    </main>
+    </section>
   );
 };
 

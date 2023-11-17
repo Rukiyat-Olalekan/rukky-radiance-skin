@@ -1,31 +1,37 @@
-import React, { Suspense, useState } from "react";
-import Header from "./components/Layout/Header";
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import Root from "./pages/Root";
 import AvailableProducts from "./components/Products/AvailableProducts";
-import Cart from "./components/Cart/Cart";
-import CartProvider from "./store/CartProvider";
-import Footer from "./components/Layout/Footer";
+import SignIn from "./components/Auth/SignIn";
+import SignUp from "./components/Auth/SignUp";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <AvailableProducts />,
+      },
+      {
+        path: "/login",
+        element: <SignIn />
+      },
+      {
+        path: "/create",
+        element: <SignUp />,
+      },
+    ],
+  },
+]);
+
 
 function App() {
-  const [showCart, setShowCart] = useState(false);
-
-  const showCartHandler = () => {
-    setShowCart((prevState) => !prevState);
-  };
-
-  const closeCartHandler = () => {
-    setShowCart(false);
-  };
-
   return (
-    <CartProvider>
-      <Suspense fallback={<div>Loading...</div>}>
-        {showCart && <Cart onCloseCart={closeCartHandler} />}
-      </Suspense>
-      <Header onClick={showCartHandler} />
-      <AvailableProducts />
-      <Footer></Footer>
-    </CartProvider>
-  );
+    <RouterProvider router={router} />
+  )
 }
 
-export default App;
+export default App
