@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-
-import { app } from "../../firebaseConfig";
-
 import classes from "./AvailableProducts.module.css";
+
+import Slogan from "./Slogan";
 import ProductLists from "./Product/ProductLists";
-import StockLists from "./Stock/StockLists";
+import Featured from "./Featured";
+import StockLists from "../StockProducts/StockLists";
 
 const AvailableProducts = () => {
   const [fetchedData, setFetchedData] = useState([]);
@@ -42,12 +42,14 @@ const AvailableProducts = () => {
 
   return (
     <section className={classes["available-products"]}>
+      <Slogan />
       {error ? (
         <p className={classes.error}>{error}</p>
       ) : (
         <ProductLists items={fetchedData} />
       )}
-      <StockLists items={fetchedData} />
+      <Featured />
+      <StockLists stockItems={fetchedData}/>
     </section>
   );
 };

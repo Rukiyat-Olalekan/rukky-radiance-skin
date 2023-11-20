@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { BiLogoTwitter } from "react-icons/bi";
@@ -12,24 +14,24 @@ const Footer = () => {
         {" "}
         <ul>
           <li>
-            <a href="https://github.com/rukkyy">
+            <Link to="https://github.com/Rukiyat-Olalekan">
               <FaInstagram size="40px" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.aedin.com/in/rukiyat-olalekan/">
+            <Link to="https://www.facebook.com/profile.php?id=61553868952762">
               <FaFacebook size="40px" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://twitter.com/TheDevRukky">
+            <Link to="https://twitter.com/TheDevRukky">
               <BiLogoTwitter size="40px" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://twitter.com/TheDevRukky">
+            <Link to="https://www.pinterest.com/rukk__y/">
               <BsPinterest size="40px" />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -37,20 +39,25 @@ const Footer = () => {
         {" "}
         <ul>
           <li>
-            <a href="/story">About</a>
+            <Link to="/information">Information</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="/contact">Terms & Condition</a>
+            <Link to="/terms-and-conditions">Terms & Condition</Link>
           </li>
           <li>
-            <a href="/contact">Work With Me</a>
+            <Link to="/help-and-support">Help and Support</Link>
           </li>
         </ul>
       </div>
-      <div className={classes.reserved}><p>&copy; {new Date().getFullYear()} Rukky Radiance Skin. All rights reserved.</p></div>
+      <div className={classes.reserved}>
+        <p>
+          &copy; {new Date().getFullYear()} Rukky Radiance Skin. All rights
+          reserved.
+        </p>
+      </div>
     </footer>
   );
 };

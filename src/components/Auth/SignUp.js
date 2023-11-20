@@ -51,8 +51,7 @@ export default function SignUp() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage)
-        console.log('hey')
+        console.log(errorCode, errorMessage);
       });
 
     console.log({
@@ -69,65 +68,91 @@ export default function SignUp() {
   }
 
   return (
-    <div className={styles.form} onSubmit={handleSubmit}>
-      <h1>Create new customer account</h1>
-      <div>
-        <h2>Personal Information</h2>
+    <div className={styles.form}>
+      <h3>Create new customer account</h3>
+      <form onSubmit={handleSubmit}>
+        {" "}
+        <p className={styles.description}>Personal Information</p>
         <div className={styles.input}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">
+            Name <span>*</span>
+          </label>
           <input id="name" type="text" ref={nameRef} required />
         </div>
         <div className={styles.input}>
-          <label htmlFor="surname">Surname</label>
+          <label htmlFor="surname">
+            Surname <span>*</span>
+          </label>
           <input id="surname" type="text" ref={surnameRef} required />
         </div>
-      </div>
-      <div>
-        <h2>Address/Contact Information</h2>
+        <p className={styles.description}>Address/Contact Information</p>
         <div className={styles.input}>
-          <label htmlFor="phonenumber">Phone Number</label>
+          <label htmlFor="phonenumber">
+            Phone Number <span>*</span>
+          </label>
           <input id="phonenumber" type="number" ref={numberRef} required />
+          <p className={styles.warning}>
+            To avoid delivery issues and extra delivery charges, kindly ensure
+            that the phone number is correct.
+          </p>
         </div>
         <div className={styles.input}>
-          <label htmlFor="streetaddress">Street Address</label>
+          <label htmlFor="streetaddress">
+            Street Address <span>*</span>
+          </label>
           <input id="streetaddress" type="text" ref={streetAddRef} required />
+          <p className={styles.warning}>
+            For doorstep delivery, kindly provide a very detailed address. Your
+            address should include your house number, street/road name, estate
+            name (if any) and the closest busstop or landmark.
+          </p>
         </div>
         <div className={styles.input}>
-          <label htmlFor="city">City/Town</label>
+          <label htmlFor="city">
+            City/Town <span>*</span>
+          </label>
           <input id="city" type="text" ref={cityRef} required />
         </div>
         <div className={styles.input}>
-          <label htmlFor="state">State</label>
-          <input id="state" type="search" ref={stateRef} required />
+          <label htmlFor="state">
+            State <span>*</span>
+          </label>
+          <input id="state" type="select" ref={stateRef} required />
         </div>
         <div className={styles.input}>
-          <label htmlFor="country">Country</label>
-          <input id="country" type="search" ref={countryRef} required />
+          <label htmlFor="country">
+            Country <span>*</span>
+          </label>
+          <input id="country" type="select" ref={countryRef} required />
         </div>
-      </div>
-      <div>
-        <h2>Sign-in Information</h2>
+        <p className={styles.description}>Sign-in Information</p>
         <div className={styles.input}>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">
+            Email <span>*</span>
+          </label>
           <input id="email" type="email" ref={emailRef} required />
         </div>
         <div className={styles.input}>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">
+            Password <span>*</span>
+          </label>
           <input id="password" type="password" ref={pwdRef} required />
         </div>
         <div className={styles.input}>
-          <label htmlFor="confirmpassword">Confirm Password</label>
+          <label htmlFor="confirmpassword">
+            Confirm Password <span>*</span>
+          </label>
           <input
             id="confirmpassword"
             type="password"
             ref={confirmPwdRef}
             required
           />
-        </div>
+        </div>{" "}
         <div className={styles.action}>
           <button>Sign Up</button>
-        </div>
-      </div>
+        </div>{" "}
+      </form>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 .button {
-    background-color: whitesmoke;
+    background-color: white;
     border: none;
     cursor: pointer;
     font: inherit;
@@ -9,18 +9,16 @@
     align-items: center;
     border-radius: 25px;
     font-weight: bold;
-    margin: 1rem;
+    margin: 1rem 0;
+    background: none;
 }
-.button:hover,
-.button:active {
-  background-color:  #d18e8d;
-}
+
 .icon {
   width: 1.35rem;
   height: 1.35rem;
 }
 .badge {
-    background-color: #d18e8d;
+    background-color: purple;
     color: white;
     padding: 0.25rem 1rem;
     border-radius: 25px;

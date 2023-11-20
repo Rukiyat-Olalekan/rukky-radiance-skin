@@ -1,0 +1,22 @@
+.slogan {
+    width: 100vw;
+    height: 40vh;
+    background-color: rgb(40, 39, 40);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan h1 {
+    margin: 3rem 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 10rem;
+}
+@media (max-width: 600px) {
+    .slogan h1 {
+        text-align: center;
+    }
+}

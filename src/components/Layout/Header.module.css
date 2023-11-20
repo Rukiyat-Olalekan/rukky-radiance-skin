@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap");
 
 .header {
   display: flex;
@@ -8,28 +9,48 @@
   width: 100vw;
   top: 0;
   z-index: 100;
-  font-weight: bold;
   padding: 1rem 0;
+  background-color: white;
+  box-shadow: 0 0 0 rgb(230, 230, 230);
+}
+.header h3 {
+  font-family: "Noto Serif", sans-serif;
+  word-spacing: 0.2rem;
+  font-size: 1.5rem;
+  flex: 1.5;
 }
 
-.header h3 {
-  font-family: 'Times New Roman', Times, serif;
-}
 .user-info {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-.header-input input {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+.header-input {
   cursor: pointer;
-  border: 1px solid black;
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header-input input:hover,
-.header-input input:focus{
-  border-color: black;
+.header-input input {
+  width: 80%;
+  padding: 0.5rem 2rem;
+  background: none;
+  color: inherit;
+  border: none;
+  border: 2px solid black;
+}
+Ï .header-input input:hover,
+.header-input input:focus {
+ 
   outline: none;
+}
+.header-input input::placeholder {
+  font-size: 1.2rem;
+}
+.user-info {
+  flex: 0.3;
+  margin-left: 1rem;
 }
 .auth button {
   background-color: black;
@@ -38,8 +59,22 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+
 @media (max-width: 450px) {
   .header {
     width: 450px;
+  }
+
+  .header h3 {
+    word-spacing: 0;
+    font-size: 1.2rem;
+    flex: 1;
+  }
+  .header-input {
+    display: none;
+    flex: 0.5;
+  }
+  .user-info {
+    flex: 0.5;
   }
 }

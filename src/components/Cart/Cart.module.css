@@ -1,38 +1,48 @@
-.cart-lists {
-    max-height: 35rem;
-    overflow: scroll;
-    list-style: none;
-    padding: 0 0.5rem;
-    margin: 1rem;
+.zero {
+  width: 80vw;
+  height: 42vh;
+  text-align: center;
+  margin: 10rem auto;
+  font-size: 1.2rem;
+}
+.some {
+  color: purple;
 }
 .cart {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: black;
-    color: white;
-    height: 3rem;
-    padding: 0.5rem 0;
+  width: 100%;
+  margin: 10rem auto 2rem auto;
 }
-.cart-total__subtotal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+.details {
+  display: flex;
+  align-items: center;
+}
+.details .image {
+  margin: 0;
+}
+.details img {
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+}
+.button {
+    margin: 0 1rem;
+}
+.button button {
+  background: none;
+  border: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
-.cart-total__actions button {
-    font-weight: bold;
-    font-size: inherit;
-    display: block;
-    width: 90%;
-    height: 3rem;
-    margin: auto;
-    margin-bottom: 1rem;
-    background-color: #ffa9ae;
-    border: 1px solid #ffa9ae;
-    color: white;
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
 }
-.cart-total__actions button:hover, .cart-total__actions button:focus {
-    background: black;
+
+.pricing p {
+  font-weight: bold;
 }

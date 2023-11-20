@@ -15,5 +15,14 @@ body {
   flex-direction: column;
 }
 main {
-  margin: 6rem 0;
+  margin: 5rem 0;
+}
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }

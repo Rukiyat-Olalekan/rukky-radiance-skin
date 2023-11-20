@@ -1,50 +1,75 @@
 .form {
-    width: 40rem;
-    margin: 5rem auto;
-  }
-  .form h2,
-  .form h3 {
-    margin: 1rem 0;
-    color: purple;
-    line-height: 2;
-  }
-  .form .input {
-    margin: 1rem 0;
-  }
-  .form label {
-    width: 100%;
-    display: block;
-    margin: 0.5rem 0;
-  }
-  .form input {
-    width: 100%;
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    padding: 1rem 0.5rem;
-  }
-  .form .form-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-  }
-  .action {
-    width: 20%;
-    margin: 3rem auto;
-  }
-  .action button {
-    display: inline;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 1rem 0.8rem;
-    border: none;
-    background-color: purple;
-    color: white;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-  .action button:hover {
-    background-color: black;
-    color: white;
-  }
+  width: 25rem;
+  height: 40rem;
+  margin: 10rem auto;
+}
+
+.form h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.form .description {
+  text-align: center;
+  margin: 0;
+}
+.form form {
+  border: 1px solid rgb(198, 198, 198);
+  padding: 1rem;
+}
+.input label {
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0 0 0;
+  font-weight: bold;
+}
+.input input {
+  width: 100%;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.password-change {
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.password-change button {
+  background: none;
+  border: none;
+  margin-bottom: 0.2rem;
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
+.login {
+  background-color: purple;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+}
+.login button, .signup button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+.account {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.signup {
+  background-color: rgb(42, 37, 37);
+  width: 100%;
+  text-align: center;
+}
+.signup a {
+  text-decoration: none;
+  color: inherit;
+}
+.signup:hover {
+  background-color: black;
+}

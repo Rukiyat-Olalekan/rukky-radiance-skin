@@ -1,0 +1,42 @@
+.featured {
+  width: 100vw;
+  height: 40vh;
+  background-color: rgb(68, 66, 68);
+  color: white;
+}
+
+.featured h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 3rem;
+}
+.featured .featured-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100vw;
+  margin: auto;
+}
+.featured-lists li {
+  width: 13rem;
+  height: 5rem;
+  border: 1px solid grey;
+  text-align: center;
+  padding-top: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .featured {
+    height: 50vh;
+  }
+  .featured h1 {
+    padding-top: 1.2rem;
+  }
+  .featured .featured-lists {
+    flex-wrap: wrap;
+  }
+}

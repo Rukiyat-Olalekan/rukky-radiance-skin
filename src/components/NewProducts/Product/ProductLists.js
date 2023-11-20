@@ -1,12 +1,12 @@
 import React from "react";
 import Product from "./Product";
-import classes from './ProductLists.module.css'
+import classes from "./ProductLists.module.css";
 
 const ProductLists = (props) => {
-    return (
-      <div className={classes["product-list"]}>
-        <h1>New Arrivals</h1>
-        <ul className={classes['product-lists']}>
+  return (
+    <div className={classes["product-list"]}>
+      <h1>New Arrivals</h1>
+      <ul className={classes["product-lists"]}>
         {props.items.map((item) => (
           <Product
             key={item.id}
@@ -18,8 +18,8 @@ const ProductLists = (props) => {
           />
         ))}
       </ul>
-      </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default ProductLists;

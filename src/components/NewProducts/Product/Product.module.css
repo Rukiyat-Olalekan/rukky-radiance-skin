@@ -1,0 +1,61 @@
+.product {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  max-width: 90%;
+}
+.product .image {
+  width: 150px;
+  height: 130px;
+  margin: 0 auto;
+}
+.product .detail {
+  margin-top: 3.8rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
+}
+
+.product:hover {
+  transition-property: box-shadow, transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease-out;
+  box-shadow: 0px 2px 8px rgb(227, 227, 239);
+  transform: translateY(-6px);
+  cursor: pointer;
+}
+.product-description {
+  font-size: small;
+}
+form .input {
+    text-align: center;
+}
+form .input label {
+  display: inline;
+  margin-right: 1rem;
+}
+form .input input {
+  display: inline;
+}
+form .action {
+    text-align: center;
+}
+form .action button {
+    background: none;
+    border: none;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+}
+form .action button:hover {
+    background-color: rgb(109, 108, 108);
+}
+@media (max-width: 600px) {
+  .product {
+    width: 30vw;
+  }
+}

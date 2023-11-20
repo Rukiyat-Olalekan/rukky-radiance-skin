@@ -1,50 +1,53 @@
 .form {
-    width: 40rem;
-    margin: rem auto;
-  }
-  .form h2,
-  .form h3 {
-    margin: 1rem 0;
-    color: purple;
-    line-height: 2;
-  }
-  .form .input {
-    margin: 1rem 0;
-  }
-  .form label {
-    width: 100%;
-    display: block;
-    margin: 0.5rem 0;
-  }
-  .form input {
-    width: 100%;
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    padding: 1rem 0.5rem;
-  }
-  .form .form-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-  }
-  .action {
-    width: 20%;
-    margin: 3rem auto;
-  }
-  .action button {
-    display: inline;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 1rem 0.8rem;
-    border: none;
-    background-color: purple;
-    color: white;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-  .action button:hover {
-    background-color: black;
-    color: white;
-  }
+  width: 30rem;
+  margin: 10rem auto;
+}
+.form h3 {
+  text-align: center;
+}
+.form .description {
+  font-weight: 100;
+  padding-top: 1rem;
+  padding-top: 1rem;
+  margin: 0;
+  font-size: large;
+}
+
+.form form {
+  border: 1px solid rgb(198, 198, 198);
+  padding: 1rem;
+}
+.input {
+  margin-bottom: 0.5rem;
+}
+
+.input label {
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0 0 0;
+  font-weight: bold;
+}
+.input input {
+  width: 100%;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.warning{
+  color: red;
+  font-style: italic;
+} 
+.action {
+  margin-top: 1rem;
+}
+.action button {
+  background: none;
+  border: none;
+  background-color: rgb(44, 42, 42);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.action button:hover {
+  background-color: purple;
+}

@@ -1,9 +1,9 @@
 import React, {useRef} from "react";
-import classes from "./StockForm.module.css";
+import classes from "./ProductForm.module.css";
 import Button from '../../UI/Button'
 import Input from "../../UI/Input";
 
-const StockForm = (props) => {
+const ProductForm = (props) => {
   const amountInputRef = useRef()
 
 
@@ -20,10 +20,9 @@ const StockForm = (props) => {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      <div className={classes.input}>
       <Input
         ref={amountInputRef}
-        label='Amount'
+        label='Qty:'
         input={{
           id: 'amount_' + props.id,
           type: 'number',
@@ -33,7 +32,6 @@ const StockForm = (props) => {
           defaultValue: '1',
         }}
       />
-      </div>
       <div className={classes["form-action"]}>
         <Button type="submit">ADD TO CART</Button>
       </div>
@@ -41,4 +39,4 @@ const StockForm = (props) => {
   );
 };
 
-export default StockForm;
+export default ProductForm;

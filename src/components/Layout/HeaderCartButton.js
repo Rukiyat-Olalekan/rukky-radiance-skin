@@ -1,23 +1,13 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import classes from "./HeaderCartButton.module.css";
-import CartIcon from "../Cart/CartIcon";
-import CartContext from "../../store/cart-context";
+import cartContext from "../../store/cartContext";
+import { IoMdCart } from "react-icons/io";
 
-const HeaderCartButton = (props) => {
-  const cartCtx = useContext(CartContext);
+const HeaderCartButton = () => {
+  const { productValue } = useContext(cartContext);
 
-  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
-    return curNumber + item.amount;
-  }, 0);
-
-  return (
-    <button className={classes.button} onClick={props.onClick}>
-      <span className={classes.icon}>
-        <CartIcon />
-      </span>
-      <span className={classes.badge}>{numberOfCartItems}</span>
-    </button>
-  );
+  const cartItems = productValue.reduce((total, item) => total + item.quantity, 0);
+  return <button className={classes.button}><IoMdCart size="40px" />{cartItems}</button>;
 };
 
 export default HeaderCartButton;
