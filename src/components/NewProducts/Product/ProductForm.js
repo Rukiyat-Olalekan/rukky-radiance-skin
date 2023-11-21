@@ -6,10 +6,8 @@ import Input from "../../UI/Input";
 const ProductForm = (props) => {
   const amountInputRef = useRef()
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
 
     const enteredAmount = amountInputRef.current.value;
     const enteredAmountNumber = +enteredAmount;

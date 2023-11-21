@@ -56,6 +56,6 @@ form .action button:hover {
 }
 @media (max-width: 600px) {
   .product {
-    width: 30vw;
+    width: 35vw;
   }
 }

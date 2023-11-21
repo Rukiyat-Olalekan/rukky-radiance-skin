@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./SignIn.module.css";
 
@@ -7,7 +7,9 @@ import { app } from "../../firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default function SignIn() {
+  const [success, setSuccess] = useState(false)
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const auth = getAuth(app);
 
@@ -26,18 +28,17 @@ export default function SignIn() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
+        setSuccess(true)
         setError(null);
+        navigate("/")
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
         setError(
           `${errorCode} : "Authentication failed. Please check your credentials."`
         );
       });
   }
-
   return (
     <div className={styles.form}>
       {error && <p className={styles.error}>{error}</p>}

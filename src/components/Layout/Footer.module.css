@@ -3,9 +3,11 @@
     color: white;
     padding: 2rem 1rem;
     text-transform: uppercase;
-    position: relative;
+    position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
+
   }
   .footer a {
     list-style-type: none;
@@ -34,7 +36,11 @@
     font-size: 7px;
     text-align: center;
   }
-  
+  @media (max-width: 600px)  {
+    .footer {
+      text-transform: capitalize;
+    }
+  }
   @media (max-width: 450px) {
     .footer {
       width: 100%;

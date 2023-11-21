@@ -28,13 +28,10 @@
 .header-input {
   cursor: pointer;
   flex: 0.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .header-input input {
-  width: 80%;
-  padding: 0.5rem 2rem;
+  width: 100%;
+  padding: 0.6rem 2rem;
   background: none;
   color: inherit;
   border: none;
@@ -69,10 +66,6 @@
     word-spacing: 0;
     font-size: 1.2rem;
     flex: 1;
-  }
-  .header-input {
-    display: none;
-    flex: 0.5;
   }
   .user-info {
     flex: 0.5;

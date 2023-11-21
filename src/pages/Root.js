@@ -6,13 +6,13 @@ import Footer from "../components/Layout/Footer";
 
 function Root() {
   return (
-    <React.Fragment>
+    <div className="content-container">
       <Header />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
 

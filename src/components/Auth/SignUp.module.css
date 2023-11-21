@@ -1,6 +1,10 @@
 .form {
   width: 30rem;
-  margin: 10rem auto;
+  margin: 2rem auto 4rem auto;
+}
+.form .para {
+  text-align: center;
+  font-size: 14px;
 }
 .form h3 {
   text-align: center;

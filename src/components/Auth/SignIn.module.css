@@ -1,9 +1,8 @@
 .form {
   width: 25rem;
   height: 40rem;
-  margin: 10rem auto;
+  margin: auto;
 }
-
 .form h3 {
   text-transform: uppercase;
   text-align: center;

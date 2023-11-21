@@ -16,12 +16,19 @@ const Product = (props) => {
   const addToCartHandler = (e) => {
     e.preventDefault();
     const quantity = +quantityInputRef.current.value;
-    
 
-    const productDetails = { productPrice, productName, productImage, quantity, id };
+    const subTotal = productPrice;
+
+    const productDetails = {
+      productPrice,
+      productName,
+      productImage,
+      quantity,
+      id,
+      subTotal
+    };
 
     addItemToCart(productDetails);
-
   };
 
   const formattedPrice = new Intl.NumberFormat("en-NG", {

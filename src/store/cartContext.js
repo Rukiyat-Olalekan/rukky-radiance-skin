@@ -1,11 +1,11 @@
 import { createContext } from "react";
 
 const cartContext = createContext({
-  price: "",
+  productPrice: "",
   productName: "",
-  image: "",
-  amount: 1,
-  subTotal: "",
+  productImage: "",
+  quantity: 1,
+  formattedSubtotal: "",
 });
 
 
